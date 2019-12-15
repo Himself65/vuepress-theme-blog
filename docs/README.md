@@ -27,6 +27,23 @@ module.exports = {
 
 ## Options
 
+### dateFormat
+
+- Type: `string'
+- Default: 'ddd MMM DD YYYY'
+
+Date format allow [this doc](https://momentjs.com/docs/#/displaying/)
+
+e.g.
+
+```js
+module.exports = {
+  themeConfig: {
+    dateFormat: 'YYYY-MM-DD'
+  }
+}
+```
+
 ### nav
 
 - Type: `Array<{ text: string, link: string }>`

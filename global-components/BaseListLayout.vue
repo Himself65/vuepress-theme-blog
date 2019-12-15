@@ -23,7 +23,7 @@
 
         <div class="ui-post-date" v-if="page.frontmatter.date">
           <ClockIcon/>
-          <span>{{ resovlePostDate(page.frontmatter.date) }}</span>
+          <span>{{ resolvePostDate(page.frontmatter.date) }}</span>
         </div>
       </div>
     </div>
@@ -39,6 +39,7 @@
   import {NavigationIcon, ClockIcon} from 'vue-feather-icons'
   import {Pagination, SimplePagination} from '@vuepress/plugin-blog/lib/client/components'
   import ThemeToggle from '@theme/components/ThemeToggle.vue'
+  import moment from 'moment'
 
   export default {
     components: {NavigationIcon, ClockIcon, ThemeToggle},
@@ -73,14 +74,14 @@
         return Vue.component(n) || Pagination
       },
 
-      resovlePostDate(date) {
-        return new Date(date.replace(/\-/g, "/").trim()).toDateString()
+      resolvePostDate(date) {
+        return moment(date).format(this.$themeConfig.dateFormat || 'ddd MMM DD YYYY')
       }
     }
   }
 </script>
 
-<style lang="stylus" scoped>
+<style lang="stylus">
   .common-layout
     .content-wrapper
       padding-bottom 80px
@@ -97,7 +98,6 @@
       color var(--title)
       font-size 25px
       font-weight 900
-
 
   .ui-post
     padding-bottom 25px
