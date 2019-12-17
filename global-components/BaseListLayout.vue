@@ -3,7 +3,7 @@
     <div class="ui-posts">
       <div class="ui-functional">
         <span class="ui-site-title">{{ $site.title }}</span>
-        <ThemeToggle/>
+        <component v-if="themeToggle" :is="themeToggle"></component>
       </div>
 
       <div class="ui-post" v-for="page in pages">
@@ -38,20 +38,26 @@
   import Vue from 'vue'
   import {NavigationIcon, ClockIcon} from 'vue-feather-icons'
   import {Pagination, SimplePagination} from '@vuepress/plugin-blog/lib/client/components'
-  import ThemeToggle from '@theme/components/ThemeToggle.vue'
   import moment from 'moment'
 
   export default {
-    components: {NavigationIcon, ClockIcon, ThemeToggle},
+    components: {NavigationIcon, ClockIcon},
 
     data() {
       return {
-        paginationComponent: null
+        paginationComponent: null,
+        themeToggle: null
       }
     },
 
     created() {
       this.paginationComponent = this.getPaginationComponent()
+    },
+
+    mounted() {
+      import('@theme/components/ThemeToggle.vue').then(module => {
+        this.themeToggle = module.default
+      })
     },
 
     computed: {
@@ -75,7 +81,7 @@
       },
 
       resolvePostDate(date) {
-        return moment(date).format(this.$themeConfig.dateFormat || 'ddd MMM DD YYYY')
+        return moment(new Date(date)).format(this.$themeConfig.dateFormat || 'ddd MMM DD YYYY')
       }
     }
   }

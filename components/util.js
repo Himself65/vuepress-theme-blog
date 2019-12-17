@@ -31,7 +31,7 @@ export function isTel (path) {
 
 export function initTheme() {
   const isDark = window.localStorage.getItem(darkThemeKey) === 'true' || false
-  const style = document.body.style
+  const style = window.document.body.style
   Object.keys(darkTheme).forEach(key => {
     isDark && style.setProperty(`--${key}`, darkTheme[key])
     !isDark && style.removeProperty(`--${key}`)

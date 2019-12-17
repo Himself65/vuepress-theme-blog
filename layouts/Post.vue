@@ -12,13 +12,11 @@
 <script>
   import Toc from '@theme/components/Toc.vue'
   import {Comment} from '@vuepress/plugin-blog/lib/client/components'
-  import ThemeToggle from '@theme/components/ThemeToggle.vue'
 
   export default {
     components: {
       Toc,
-      Comment,
-      ThemeToggle
+      Comment
     },
 
     mounted() {
