@@ -6,12 +6,11 @@
 </template>
 
 <script>
+  import {initTheme} from '../components/util'
 
   export default {
     mounted() {
-      import('@theme/components/util').then(module => {
-        module.initTheme()
-      })
+      initTheme()
     }
   }
 </script>

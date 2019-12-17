@@ -12,6 +12,7 @@
 <script>
   import Toc from '@theme/components/Toc.vue'
   import {Comment} from '@vuepress/plugin-blog/lib/client/components'
+  import {initTheme} from '../components/util'
 
   export default {
     components: {
@@ -20,9 +21,7 @@
     },
 
     mounted() {
-      import('@theme/components/util').then(module => {
-        module.initTheme()
-      })
+      initTheme()
     }
   }
 </script>

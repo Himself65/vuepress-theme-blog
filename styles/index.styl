@@ -81,14 +81,14 @@ body
 
 a
   font-weight 500
-  color $accentColor
+  color var(--text--link)
   text-decoration underline
   &:hover
-    color darken($accentColor, 20%)
+    color var(--text--link--lighten)
 
 p a code
   font-weight 400
-  color $accentColor
+  color var(--text--link--lighten)
 
 kbd
   background #eee
@@ -99,8 +99,8 @@ kbd
 
 blockquote
   font-size .9rem
-  color darken($accentColor, 50%)
-  border-left: 3px solid $accentColor;
+  color var(--text--link--lighten)
+  border-left: 3px solid var(--text--link--lighten);
   margin 0.5rem 0
   padding .25rem 0 .25rem 1rem
 

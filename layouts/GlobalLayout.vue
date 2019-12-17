@@ -30,9 +30,7 @@
     },
 
     mounted() {
-      import('@theme/components/util').then(module => {
-        module.initTheme()
-      })
+      initTheme()
       this.$router.afterEach(() => {
         this.isMobileHeaderOpen = false
       })
@@ -44,8 +42,13 @@
 <style lang="css">
   body {
     --background: #fff;
+    --code--background: #000;
     --text: #000;
-    --text--mask: rgba(0, 0, 0, 0.54);
+    --text--code: #fff;
+    --text--mask: rgba(0, 0, 0, 0.84);
+    --text--mask2: rgba(0, 0, 0, 0.54);
+    --text--link: #d05dd2;
+    --text--link--lighten: #8a278c;
     --title: #2c3e50;
   }
 </style>

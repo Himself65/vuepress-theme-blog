@@ -5,9 +5,13 @@ export const outboundRE = /^(https?:|mailto:|tel:)/
 export const darkThemeKey = 'ui-dark-theme'
 export const darkTheme = {
   'background': '#282c35',
+  'code--background': '#373c49',
   'text': '#fff',
+  'text--code': '#fff',
   'text--mask': 'rgba(255, 255, 255, 0.84)',
   'text--mask2': 'rgba(255, 255, 255, 0.54)',
+  'text--link': '#ffa7c4',
+  'text--link--lighten': '#d23669',
   'title': '#8a278c'
 }
 
