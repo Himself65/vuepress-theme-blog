@@ -1,3 +1,32 @@
+## [1.3.5](https://github.com/ulivz/vuepress-theme-blog/compare/v1.3.3...v1.3.5) (2019-12-17)
+
+
+### Bug Fixes
+
+* 'package name triggered spam detection' ([a9e4f2e](https://github.com/ulivz/vuepress-theme-blog/commit/a9e4f2ee20a437a5a6e232ef3ca48c66c7f63831))
+* darkTheme display ([a92389e](https://github.com/ulivz/vuepress-theme-blog/commit/a92389efebaac7ebf4efc71c22c76ca03d2b004f))
+* dynastic import module ([5e90357](https://github.com/ulivz/vuepress-theme-blog/commit/5e90357d8c24fa926a96c6802fed31351b615027))
+* edit name ([48afb6e](https://github.com/ulivz/vuepress-theme-blog/commit/48afb6eb67fbb378567822a8a7dd2ddf22907efc))
+* import error ([77f4b0f](https://github.com/ulivz/vuepress-theme-blog/commit/77f4b0fbc3aa09c65c9dc1874905856101e07964))
+* rename project ([b20765e](https://github.com/ulivz/vuepress-theme-blog/commit/b20765e4e321578dcad38f0b95ace628b2a11c24))
+
+
+### Features
+
+* support dark theme ([5a19437](https://github.com/ulivz/vuepress-theme-blog/commit/5a194376e61a5eb87a0b5262d4ad45aa74335606))
+* support for custom dates ([8793f5b](https://github.com/ulivz/vuepress-theme-blog/commit/8793f5b2d7af7cf283eee9aa14495242a3f0c74d))
+
+
+
+## [1.3.3](https://github.com/ulivz/vuepress-theme-blog/compare/v1.3.2...v1.3.3) (2019-11-23)
+
+
+### Features
+
+* add several contact types ([8f5d015](https://github.com/ulivz/vuepress-theme-blog/commit/8f5d015cefc4e91049a33414b7577e7eb9544a3c))
+
+
+
 ## [1.3.4](https://github.com/ulivz/vuepress-theme-blog/compare/v1.3.3...v1.3.4) (2019-12-17)
 
 
