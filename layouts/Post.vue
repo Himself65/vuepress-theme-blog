@@ -13,7 +13,6 @@
   import Toc from '@theme/components/Toc.vue'
   import {Comment} from '@vuepress/plugin-blog/lib/client/components'
   import ThemeToggle from '@theme/components/ThemeToggle.vue'
-  import {initTheme} from '../components/util'
 
   export default {
     components: {
@@ -23,7 +22,9 @@
     },
 
     mounted() {
-      initTheme()
+      import('@theme/components/util').then(module => {
+        module.initTheme()
+      })
     }
   }
 </script>

@@ -10,7 +10,7 @@
 
 <script>
   import {ToggleButton} from 'vue-js-toggle-button'
-  import {darkThemeKey, darkTheme} from './util'
+  import {darkThemeKey} from './util'
 
   export default {
     components: {ToggleButton},
@@ -19,20 +19,18 @@
         defaultValue: false
       }
     },
-    created() {
+    beforeMount() {
       this.defaultValue = window.localStorage.getItem(darkThemeKey) === 'true' || false
     },
     methods: {
       onChange({value}) {
         window.localStorage.setItem(darkThemeKey, value)
-        this.setTheme(value)
+        this.setTheme()
       },
 
-      setTheme(isDark) {
-        const style = document.body.style
-        Object.keys(darkTheme).forEach(key => {
-          isDark && style.setProperty(`--${key}`, darkTheme[key])
-          !isDark && style.removeProperty(`--${key}`)
+      setTheme() {
+        import('@theme/components/util').then(module => {
+          module.initTheme()
         })
       }
     }
