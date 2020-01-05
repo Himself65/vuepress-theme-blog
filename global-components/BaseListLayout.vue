@@ -62,7 +62,9 @@
 
     computed: {
       pages() {
-        return this.$pagination.pages
+        return this.$pagination.pages.sort((a, b) => {
+          moment(new Date(a.lastUpdated)).isAfter(moment(new Date(b.lastUpdated)))
+        })
       },
     },
 
